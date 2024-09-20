@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KhoyRati Bank</title>
+  <link rel="shortcut icon" href="./src/images/user - Copy.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body data-theme="light">
+  <header class="bg-slate-50">
+    <div class="container px-5 py-2">
+      <nav class="flex items-center justify-between">
+        <div class="logo text-2xl font-bold">
+          KhoyRati Bank LTD.
+        </div>
+        <div class="menu">
+          <ul class="flex space-x-5 text-xl font-semibold">
+            <li><button id="loginBtn">User:  <img class="max-w-9" src="./src/images/user.png" alt="">Jk Morga</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section min-h-[80vh] bg-blue-200 py-5">
+      <div class="menu  grid sm:grid-cols-3 gap-3 sm:gap-8">
+        <button id="depositeBtn" class="text-xl focus:bg-green-500 flex items-center justify-center bg-slate-50 min-h-[50px]">Deposit Balance</button>
+        <button id="withdrawBtn" class="text-xl focus:bg-green-500 flex items-center justify-center bg-slate-50 min-h-[50px]">Withdraw Balance</button>
+        <button id="historyBtn" class="text-xl focus:bg-green-500 flex items-center justify-center bg-slate-50 min-h-[50px]">Transaction History</button>
+      </div>
+        <div id="dpForm" class="card mx-auto mt-5 bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Deposite Amount</span>
+              </label>
+              <input type="text" id="idNumber" placeholder="Deposite Amount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">PIN Number</span>
+              </label>
+              <input type="password" id="pinNumber" placeholder="Enter Your Pin" class="input input-bordered" required />
+            </div>
+            <div class="form-control mt-6">
+              <button id="submitBtn" class="btn btn-primary">Deposite</button>
+            </div>
+          </form>
+        </div>
+        <div id="wdForm" style="display: none;" class="card mt-5 mx-auto bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Withdraw Amount</span>
+              </label>
+              <input type="text" placeholder="Withdraw Amount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">PIN Number</span>
+              </label>
+              <input type="password" placeholder="Enter Your Pin" class="input input-bordered" required />
+            </div>
+            <div class="form-control mt-6">
+              <button class="btn btn-primary">Withdraw</button>
+            </div>
+          </form>
+        </div>
+        <div id="hsForm" style="display: none;" class="text-2xl sm:w-1/2 mx-auto font-semibold transaction-content mt-5 text-center">
+          <h1 class="mx-5 flex items-center justify-between px-5 bg-orange-300 mt-3 py-3">$2300<i class="text-2xl fa-solid fa-arrow-right-long"></i></h1>
+          <h1 class="mx-5 flex items-center justify-between px-5 bg-green-500 mt-3 py-3">$300<i class=" fa-solid fa-arrow-left-long"></i></h1>
+        </div>
+    </section>
+  </main>
+  <script src="./src/script/utilities.js"></script>
+  <script src="./src/script/bank.js"></script>
+</body>
+</html>

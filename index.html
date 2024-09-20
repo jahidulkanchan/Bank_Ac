@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/images/user.png" type="image/x-icon">
+  <title>KhoyRati Bank</title>
+  
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body data-theme="light">
+  <header class="bg-slate-50">
+    <div class="container px-5 py-2">
+      <nav class="flex items-center justify-between">
+        <div class="logo text-2xl font-bold">
+          KhoyRati Bank LTD.
+        </div>
+        <div class="menu">
+          <ul class="flex space-x-5 text-xl font-semibold">
+            <li><button>Register</button></li>
+            <li><button id="loginBtn">Login</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section py-5">
+      <div class="grid grid-cols-6 relative">
+        <div id="form" class="card scale-0 duration-300 absolute top-[20%] left-0 mx-auto right-0 bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">ID Number</span>
+              </label>
+              <input type="text" id="idNumber" placeholder="Enter Your ID No." class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">PIN Number</span>
+              </label>
+              <input type="password" id="pinNumber" placeholder="Enter Your Pin" class="input input-bordered" required />
+            </div>
+            <div class="form-control mt-6">
+              <button id="submitBtn" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+        <img class="mx-auto md:w-2/3 col-start-2 col-end-6" src="./src/images/bank-png.webp" alt="">
+      </div>
+    </section>
+  </main>
+  <script src="./src/script/index.js"></script>
+</body>
+</html>
