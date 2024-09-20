@@ -27,6 +27,7 @@
   </header>
   <main>
     <section class="hero-section min-h-[80vh] bg-blue-200 py-5">
+      <h1 class="font-bold bg-slate-50 w-fit mx-auto mb-10 py-2 px-5 rounded-full text-center text-2xl">Total Balance: $<span id="totalBalance">12000</span></h1>
       <div class="menu  grid sm:grid-cols-3 gap-3 sm:gap-8">
         <button id="depositeBtn" class="text-xl focus:bg-green-500 flex items-center justify-center bg-slate-50 min-h-[50px]">Deposit Balance</button>
         <button id="withdrawBtn" class="text-xl focus:bg-green-500 flex items-center justify-center bg-slate-50 min-h-[50px]">Withdraw Balance</button>
@@ -38,16 +39,16 @@
               <label class="label">
                 <span class="label-text">Deposite Amount</span>
               </label>
-              <input type="text" id="idNumber" placeholder="Deposite Amount" class="input input-bordered" required />
+              <input type="text" id="dpIdNumber" placeholder="Deposite Amount" class="input input-bordered" required />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">PIN Number</span>
               </label>
-              <input type="password" id="pinNumber" placeholder="Enter Your Pin" class="input input-bordered" required />
+              <input type="password" id="dpPinNumber" placeholder="Enter Your Pin" class="input input-bordered" required />
             </div>
             <div class="form-control mt-6">
-              <button id="submitBtn" class="btn btn-primary">Deposite</button>
+              <button id="dpSubmitBtn" class="btn btn-primary">Deposite</button>
             </div>
           </form>
         </div>
@@ -57,16 +58,16 @@
               <label class="label">
                 <span class="label-text">Withdraw Amount</span>
               </label>
-              <input type="text" placeholder="Withdraw Amount" class="input input-bordered" required />
+              <input type="text" id="wdAmountInput" placeholder="Withdraw Amount" class="input input-bordered" required />
             </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">PIN Number</span>
               </label>
-              <input type="password" placeholder="Enter Your Pin" class="input input-bordered" required />
+              <input type="password" id="wdPinNumber" placeholder="Enter Your Pin" class="input input-bordered" required />
             </div>
             <div class="form-control mt-6">
-              <button class="btn btn-primary">Withdraw</button>
+              <button id="wdSubmitBtn" class="btn btn-primary">Withdraw</button>
             </div>
           </form>
         </div>

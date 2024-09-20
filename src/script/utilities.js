@@ -5,3 +5,11 @@ const showFormIterface = (id)=>{
   const showId = document.getElementById(id).style.display = "block";
   return showId;
 }
+
+
+// Deposit Field Setup ===================================
+const getInputValue = (id)=>{
+  const getInputValueId = document.getElementById(id).value;
+  const getInputParseValue = parseFloat(getInputValueId);
+  return getInputParseValue;
+}
