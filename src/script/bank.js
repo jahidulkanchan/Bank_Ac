@@ -22,7 +22,7 @@ document.getElementById("dpSubmitBtn").addEventListener("click", (e) =>{
   const dpIdNumber = getInputValue("dpIdNumber");
   const dpPinNumber = getInputValue("dpPinNumber");
   // console.log({ dpIdNumber, dpPinNumber });
-  if(dpPinNumber === 1234){
+  if(dpPinNumber === 1234 && !isNaN(dpIdNumber)){
     document.getElementById("totalBalance").innerText = totalBalanceParse + dpIdNumber;
     document.getElementById("dpIdNumber").value = '';
     document.getElementById("dpPinNumber").value = '';
@@ -57,7 +57,7 @@ document.getElementById("wdSubmitBtn").addEventListener("click", (e) =>{
   const wdAmountInput = getInputValue("wdAmountInput");
   const wdPinNumber = getInputValue("wdPinNumber");
 
-  if(wdPinNumber === 1234){
+  if(wdPinNumber === 1234 && wdAmountInput <= totalBalanceParse && !isNaN(wdAmountInput)) {
     document.getElementById("totalBalance").innerText = totalBalanceParse - wdAmountInput;
     document.getElementById("wdAmountInput").value = '';
     document.getElementById("wdPinNumber").value = '';
