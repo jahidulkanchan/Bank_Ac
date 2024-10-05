@@ -11,7 +11,7 @@ document.getElementById("historyBtn").addEventListener("click", ()=>{
   showFormIterface("hsForm");
 });
 
-
+// Notice: =====   When need to check number must be use isNaN cause this is also check NaN and NaN is also typeof number so its better then check typeof number ================
 // Total Balance setUp =====================================
 let totalBalance = document.getElementById("totalBalance").innerText;
 let totalBalanceParse = parseFloat(totalBalance);
